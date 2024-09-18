@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+
+<body>
+    <form id="meuFormulario">
+        <label><b>Calculadora Simples</b></label>
+    </form>
+    <input type="text" id="result" placeholder="0"> <br>
+    <input type="number" id="n1" placeholder="Digite o valor 1"> <br>
+    <input type="text" id="n2" placeholder="Digite o valor 2"><br>
+    <button onclick="calcSoma()">+</button>
+    <button onclick="calcSub()">-</button>
+    <button onclick="calcMult()">*</button>
+    <button onclick="calcDiv()">/ </button>
+    <button onclick="apagar()">C</button>
+    <script>
+        function calcSoma() {
+            let n1 = document.getElementById("n1").value;
+            let n2 = document.getElementById("n2").value;
+            let results = parseFloat(n1) + parseFloat(n2)
+            document.getElementById("result").value = results;
+        }
+        function calcSub() {
+            let n1 = document.getElementById("n1").value;
+            let n2 = document.getElementById("n2").value;
+            let results = parseFloat(n1) - parseFloat(n2)
+            document.getElementById("result").value = results;
+        }
+        function calcMult() {
+            let n1 = document.getElementById("n1").value;
+            let n2 = document.getElementById("n2").value;
+            let results = parseFloat(n1) * parseFloat(n2)
+            document.getElementById("result").value = results;
+        }
+        function calcDiv() {
+            let n1 = document.getElementById("n1").value;
+            let n2 = document.getElementById("n2").value;
+            let results = parseFloat(n1) / parseFloat(n2)
+            document.getElementById("result").value = results;
+        }
+        function apagar() {
+            document.getElementById("n1").value = ""
+            document.getElementById("n2").value = ""
+            document.getElementById("result").value = ""
+        }
+    </script>
+</body>
+</html>
